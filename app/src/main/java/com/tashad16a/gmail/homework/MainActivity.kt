@@ -5,17 +5,12 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
 import android.view.MenuItem
-<<<<<<< HEAD
 import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.Gravity
 
 
-=======
-
-import kotlinx.android.synthetic.main.activity_main.*
->>>>>>> b9df59a... create project
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +23,6 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
-<<<<<<< HEAD
         //создаём и отображаем текстовое уведомление
         val toast = Toast.makeText(
             this,
@@ -38,8 +32,6 @@ class MainActivity : AppCompatActivity() {
         toast.setGravity(Gravity.TOP, 0, 0);   //позиция на экране
         toast.show()
 
-=======
->>>>>>> b9df59a... create project
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
