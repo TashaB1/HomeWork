@@ -26,10 +26,15 @@ class MainActivity : AppCompatActivity() {
         //создаём и отображаем текстовое уведомление
         val toast = Toast.makeText(
             this,
+<<<<<<< HEAD
             "Hello world!",
             Toast.LENGTH_SHORT  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
+=======
+            "Hello world! Have a nice day!",
+            Toast.LENGTH_LONG  //показывает текстовое уведомление в течение длительного периода времени
+>>>>>>> 437a1cf... position change
         )
-        toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
+        toast.setGravity(Gravity.TOP, 0, 0);   //позиция на экране
         toast.show()
 
     }
