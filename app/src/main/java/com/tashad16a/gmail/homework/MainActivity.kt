@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             "Hello world!",
             Toast.LENGTH_SHORT
         )
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.show()
 
     }
