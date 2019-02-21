@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             "Hello world!",
             Toast.LENGTH_SHORT  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
         )
-        toast.setGravity(Gravity.CENTER, 0, 0); //позиция на экране
+        toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
         toast.show()
 
     }
