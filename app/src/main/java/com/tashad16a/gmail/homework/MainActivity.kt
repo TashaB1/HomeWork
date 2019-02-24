@@ -9,6 +9,7 @@ import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.Gravity
+import android.view.View
 
 
 
@@ -23,17 +24,28 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+    }
+
+    fun showToastHello(view: View){
         //создаём и отображаем текстовое уведомление
         val toast = Toast.makeText(
             this,
             "Hello world! have a nice evening!",
-            Toast.LENGTH_SHORT  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
+            Toast.LENGTH_LONG  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
         )
         toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
         toast.show()
+    }
 
-
-
+    fun showToastBye(view: View){
+        //создаём и отображаем текстовое уведомление
+        val toast = Toast.makeText(
+            this,
+            "Goodbye world!",
+            Toast.LENGTH_LONG  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
+        )
+        toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
+        toast.show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
