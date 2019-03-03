@@ -10,6 +10,8 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.Gravity
 import android.view.View
+import android.widget.ImageView
+import android.widget.LinearLayout
 
 
 
@@ -27,24 +29,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showToastHello(view: View){
-        //создаём и отображаем текстовое уведомление
         val toast = Toast.makeText(
-            this,
-            "Hello world! Good day!",
-            Toast.LENGTH_LONG  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
+            applicationContext,
+            "Hello world! Have a nice evening!",
+            Toast.LENGTH_LONG
         )
-        toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        val toastView = toast.view as LinearLayout
+        val pic = ImageView(applicationContext)
+        pic.setImageResource(R.drawable.morning)
+        toastView.addView(pic, 0)
         toast.show()
     }
 
     fun showToastBye(view: View){
-        //создаём и отображаем текстовое уведомление
         val toast = Toast.makeText(
-            this,
-            "Goodbye world!",
-            Toast.LENGTH_LONG  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
+            applicationContext,
+            "Goodbye world! Good dreams!",
+            Toast.LENGTH_LONG
         )
-        toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        val toastView = toast.view as LinearLayout
+        val pic = ImageView(applicationContext)
+        pic.setImageResource(R.drawable.sunset)
+        toastView.addView(pic, 0)
         toast.show()
     }
 
