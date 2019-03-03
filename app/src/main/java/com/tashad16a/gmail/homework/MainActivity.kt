@@ -27,24 +27,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showToastHello(view: View){
-        //создаём и отображаем текстовое уведомление
         val toast = Toast.makeText(
             this,
-            "Hello world! have a nice evening!",
-            Toast.LENGTH_LONG  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
+            "Hello world! Have a nice evening!",
+            Toast.LENGTH_LONG  
         )
         toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
         toast.show()
     }
 
     fun showToastBye(view: View){
-        //создаём и отображаем текстовое уведомление
         val toast = Toast.makeText(
             this,
-            "Goodbye world!",
-            Toast.LENGTH_LONG  //(По умолчанию) показывает текстовое уведомление на короткий промежуток времени
+            "Goodbye world! Good dreams!",
+            Toast.LENGTH_LONG
         )
-        toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
+        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);   //позиция на экране
         toast.show()
     }
 
