@@ -10,7 +10,8 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.Gravity
 import android.view.View
-
+import android.widget.ImageView
+import android.widget.LinearLayout
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,20 +31,29 @@ class MainActivity : AppCompatActivity() {
         val toast = Toast.makeText(
             this,
             "Hello world! Have a nice evening!",
-            Toast.LENGTH_LONG  
+            Toast.LENGTH_LONG
         )
-        toast.setGravity(Gravity.CENTER, 0, 0);   //позиция на экране
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        val toastView = toast.view as LinearLayout
+        val pic = ImageView(applicationContext)
+        pic.setImageResource(R.drawable.morning)
+        toastView.addView(pic, 0)
         toast.show()
     }
 
     fun showToastBye(view: View){
         val toast = Toast.makeText(
-            this,
+            applicationContext,
             "Goodbye world! Good dreams!",
             Toast.LENGTH_LONG
         )
-        toast.setGravity(Gravity.CENTER_HORIZONTAL, 0, 0);   //позиция на экране
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        val toastView = toast.view as LinearLayout
+        val pic = ImageView(applicationContext)
+        pic.setImageResource(R.drawable.sunset)
+        toastView.addView(pic, 0)
         toast.show()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
