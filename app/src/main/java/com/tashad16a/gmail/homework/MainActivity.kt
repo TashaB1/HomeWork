@@ -14,7 +14,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
     fun showToastHello(view: View){
         val toast = Toast.makeText(
-            applicationContext,
+            this,
             "Hello world! Have a nice evening!",
             Toast.LENGTH_LONG
         )
@@ -54,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         pic.setImageResource(R.drawable.sunset)
         toastView.addView(pic, 0)
         toast.show()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
