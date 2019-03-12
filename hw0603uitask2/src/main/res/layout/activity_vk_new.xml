@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/ui_vk_new_root_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                tools:showIn="@layout/activity_vk_profile_page">
+
+    <ImageView
+            android:id="@+id/vk_new_avatar_image_view"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/ic_avatar_round_vk"
+            android:scaleType="centerCrop"
+            android:gravity="center"/>
+
+    <TextView
+            android:id="@+id/vk_new_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="17dp"
+            android:layout_toRightOf="@id/vk_new_avatar_image_view"
+            android:text="@string/vk_new"
+            android:textSize="14sp"
+            android:textColor="@color/grey_600"
+            app:fontFamily="@font/lucida_sans"
+            android:scaleX="1.045"
+            android:gravity="center"/>
+
+    <ImageView
+            android:id="@+id/vk_new_foto_image_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/vk_new_rounds_image_view"
+            android:src="@drawable/ic_foto_24dp"
+            android:scaleType="centerCrop"
+            android:gravity="center"/>
+
+    <ImageView
+            android:id="@+id/vk_new_rounds_image_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/ic_rounds_256"
+            android:scaleType="centerCrop"
+            android:gravity="center"
+            android:layout_alignParentRight="true"/>
+
+</RelativeLayout>
