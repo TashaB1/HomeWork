@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">hw0403services</string>
+
+    <string name="freedom">freedom</string>
+
+    <string-array name="theme_lesson">
+        <item>Clean code</item>
+        <item>Android Services</item>
+        <item>Android UI</item>
+        <item>Compound View/Navigation drawer</item>
+        <item>RecyclerView</item>
+        <item>Kotlin</item>
+    </string-array>
+</resources>

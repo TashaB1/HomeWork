@@ -1,0 +1,61 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <Button
+                android:id="@+id/lesson1_button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Lesson 28.02.2019"
+                android:textAllCaps="false"/>
+
+        <Button
+                android:id="@+id/lesson2_button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Lesson 04.03.2019"
+                android:textAllCaps="false"/>
+
+        <Button
+                android:id="@+id/lesson3_button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Lesson 06.03.2019"
+                android:textAllCaps="false"/>
+
+        <Button
+                android:id="@+id/lesson4_button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Lesson 11.03.2019"
+                android:textAllCaps="false"/>
+
+        <Button
+                android:id="@+id/lesson5_button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Lesson 14.03.2019"
+                android:textAllCaps="false"/>
+
+        <Button
+                android:id="@+id/lesson6_button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="Lesson 18.03.2019"
+                android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/lesson7_button"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Lesson ..."
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+</ScrollView>
