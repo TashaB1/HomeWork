@@ -38,8 +38,6 @@ class LessonInformationFragment : Fragment() {
 
         lastInfo = lessonInformation.text.toString()
         outState.putString("INFORMATION", lastInfo)
-
-        //TODO restores image state
     }
 
     override fun onViewStateRestored(savedInstanceState: Bundle?) {
@@ -59,7 +57,7 @@ class LessonInformationFragment : Fragment() {
     }
 
     fun setInformation(buttonIndex: Int) {
-        val lessonInformationText = lessonThemesArray[buttonIndex]
+        val lessonInformationText = lessonThemesArray[buttonIndex - 1]
         lessonInformation.setText(lessonInformationText)
         lastInfo = lessonInformationText
 

@@ -22,4 +22,11 @@
             android:layout_weight="1"
             tools:layout="@layout/fragment_lesson_information"/>
 
+    <Button
+            android:id="@+id/lesson_progress_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Показать прогресс"
+            android:textAllCaps="false"/>
+
 </LinearLayout>

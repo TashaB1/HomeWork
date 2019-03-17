@@ -1,0 +1,22 @@
+package com.tashad16a.gmail.hw0403services.service
+
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.view.Gravity
+import android.widget.Toast
+
+class MessageBroadcastReceiver : BroadcastReceiver() {
+
+    override fun onReceive(context: Context, intent: Intent) {
+        val toast: Toast?
+        toast = Toast.makeText(
+            context,
+            "сообщение: " + intent.getStringExtra("MESSAGE"),
+            Toast.LENGTH_LONG
+        )
+
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show()
+    }
+}
