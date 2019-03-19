@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Tue Mar 19 22:56:43 MSK 2019
+0.baseType=DIRECTORY
+0.base=E\:\\TashaB\\Work\\android\\HomeWork\\hw0403services\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+0.path=classes.dex
+0.set=DEX
+count=1
