@@ -5,28 +5,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/toolbar"
-            tools:context="com.tashad16a.gmail.hw0603ui.MainActivity">
-    <!--android:background="@drawable/ic_screenshot_vk" -->
+            tools:context="com.tashad16a.gmail.hw0603ui.MainActivity"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <LinearLayout
             android:id="@+id/vk_general_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/blue_grey_100">
 
         <LinearLayout
                 android:id="@+id/vk_block_info_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/background_layout">
-
-            <ImageView
-                    android:id="@+id/vk_avatar_image_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="177dp"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ic_avatar_vk"/>
+                android:background="?android:attr/windowBackground">
 
             <Button
                     android:id="@+id/vk_edit_button"
@@ -35,10 +29,10 @@
                     android:text="@string/vk_button_text"
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginLeft="13dp"
-                    android:layout_marginRight="13dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:inputType="textCapSentences"
-                    android:background="@color/blue_grey_100"
+                    android:background="@drawable/rounded_corners"
                     android:textColor="@color/text_vk_active"/>
 
             <LinearLayout
@@ -67,7 +61,7 @@
                 android:layout_marginTop="8dp"
                 android:paddingLeft="17dp"
                 android:paddingRight="17dp"
-                android:background="@color/background_layout">
+                android:background="?android:attr/windowBackground">
 
             <include layout="@layout/activity_vk_new"/>
 
@@ -81,18 +75,12 @@
                 android:layout_marginTop="8dp"
                 android:paddingLeft="17dp"
                 android:paddingRight="17dp"
-                android:background="@color/background_layout">
+                android:background="?android:attr/windowBackground">
 
             <include layout="@layout/activity_vk_foto_count"/>
             <include layout="@layout/activity_vk_foto_scroll"/>
 
         </LinearLayout>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp"/>
 
     </LinearLayout>
 

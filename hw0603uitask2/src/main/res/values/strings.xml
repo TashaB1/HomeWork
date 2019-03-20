@@ -20,4 +20,12 @@
 
     <string name="vk_menu_item_copy_link">Скопировать ссылку</string>
     <string name="vk_menu_item_open_in_brouser">Открыть в браузере</string>
+
+    <string name="vk_menu_bottom_navigation_phone_content"> </string>
+    <string name="vk_menu_bottom_navigation_search"> </string>
+    <string name="vk_menu_bottom_navigation_notifications"> </string>
+    <string name="vk_menu_bottom_navigation_obl"> </string>
+    <string name="vk_menu_bottom_navigation_menu"> </string>
+
+    <string name="vk_toolbar_title">Наталья Позитив</string>
 </resources>

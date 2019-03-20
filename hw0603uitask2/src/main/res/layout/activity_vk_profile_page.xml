@@ -1,24 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/ui_vk_new_root_view"
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/toolbar_appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_collapsing"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:clickable="true"
-                android:focusable="true"
-                android:orientation="vertical"
-                tools:showIn="@layout/activity_vk_profile_page">
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:fitsSystemWindows="true"
+                app:title="@string/vk_toolbar_title"
+                app:navigationIcon="?attr/homeAsUpIndicator">
 
-    <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:minHeight="?attr/actionBarSize"
-            app:navigationIcon="?attr/homeAsUpIndicator"/>
-    //TODO add Collapsingbar and edit and clean code
+            <ImageView
+                    android:id="@+id/toolbar_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_avatar_vk"
+                    android:fitsSystemWindows="true"
+                    app:layout_collapseMode="pin"/>
+
+            <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:navigationIcon="?attr/homeAsUpIndicator"
+                    app:layout_collapseMode="parallax"/>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/activity_vk_profile_page_scroll"/>
-    <include layout="@layout/activity_vk_profile_page_bottom_panel"/>
 
-</RelativeLayout>
+    <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:itemIconTint="@drawable/bottom_navigation_colors"
+            app:itemTextColor="@drawable/bottom_navigation_colors"
+            app:menu="@menu/bottom_navigation_items"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"/>
+
+</android.support.design.widget.CoordinatorLayout>
