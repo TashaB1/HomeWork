@@ -20,6 +20,5 @@
 
     <color name="blue_grey_100">#ECEFF1</color>
 
-    <color name="background_layout">#EEEEEE</color>
-    <color name="background_vk">#E0E0E0</color>
+    <color name="white">#FFFFFF</color>
 </resources>

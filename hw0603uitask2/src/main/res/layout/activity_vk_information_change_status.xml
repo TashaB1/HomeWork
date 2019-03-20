@@ -17,7 +17,7 @@
             android:id="@+id/vk_information_icon_change_status_image_view"
             android:layout_width="22dp"
             android:layout_height="20dp"
-            app:srcCompat="@drawable/ic_obl_256" />
+            app:srcCompat="@drawable/ic_obl" />
 
     <TextView
             android:id="@+id/vk_information_change_status_text_view"
