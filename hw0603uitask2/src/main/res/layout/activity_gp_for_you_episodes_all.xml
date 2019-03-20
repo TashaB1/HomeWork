@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/gp_episode_all"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_below="@+id/gp_episode3">
+
+    <ImageView
+            android:id="@+id/gp_image_episodes_all"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_forward_24dp"/>
+
+    <TextView
+            android:id="@+id/gp_title_episodes_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/gp_еpisodes_all"
+            android:textSize="12sp"
+            android:textColor="@color/text_vk_active"
+            app:fontFamily="@font/lucida_sans"
+            android:scaleX="1.045"
+            android:layout_toEndOf="@+id/gp_image_episodes_all"/>
+
+</RelativeLayout>

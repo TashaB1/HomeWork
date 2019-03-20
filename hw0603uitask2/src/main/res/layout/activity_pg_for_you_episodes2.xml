@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/gp_episode2"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="@drawable/rounded_frame"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:layout_below="@+id/gp_episode1">
+
+    <ImageView
+            android:id="@+id/avatar_episode2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_block_foto2"
+            android:background="@drawable/rounded_corners"/>
+
+    <TextView
+            android:id="@+id/title_episode2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@id/avatar_episode2"
+            android:text="@string/gp_episodes2_title"
+            android:textColor="@color/real_black"
+            android:textSize="16sp"/>
+
+    <TextView
+            android:id="@+id/date_episode2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/avatar_episode2"
+            android:text="@string/gp_episodes2_data"
+            android:textSize="14sp"/>
+
+    <TextView
+            android:id="@+id/time_episode2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/date_episode2"
+            android:text="@string/gp_episodes2_time"
+            android:textSize="14sp"/>
+
+    <ImageView
+            android:id="@+id/play_episode2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_play_24dp"
+            android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

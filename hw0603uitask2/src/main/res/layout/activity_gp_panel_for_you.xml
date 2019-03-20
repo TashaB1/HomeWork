@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_margin="4dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        card_view:cardCornerRadius="8dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/gp_for_you_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/gp_for_you"
+                android:textSize="18sp"
+                android:textColor="@color/grey_600"
+                app:fontFamily="@font/lucida_sans"
+                android:scaleX="1.045"/>
+
+        <android.support.design.widget.TabLayout
+                android:id="@+id/gp_for_you_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabTextColor="@color/grey_600"
+                app:tabSelectedTextColor="@color/text_vk_active"/>
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/gp_for_you_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"/>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

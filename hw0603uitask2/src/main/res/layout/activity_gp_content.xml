@@ -1,0 +1,22 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            tools:context="com.tashad16a.gmail.hw0603ui.MainActivity"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+            android:id="@+id/vk_general_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/blue_grey_100">
+
+        <include layout="@layout/activity_gp_panel_square_image"/>
+        <include layout="@layout/activity_gp_panel_for_you"/>
+
+    </LinearLayout>
+
+</ScrollView>

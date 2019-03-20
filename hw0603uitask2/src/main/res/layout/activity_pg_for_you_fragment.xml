@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ui_vk_information_count_friends_root_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include layout="@layout/activity_pg_for_you_episodes1"/>
+    <include layout="@layout/activity_pg_for_you_episodes2"/>
+    <include layout="@layout/activity_pg_for_you_episodes3"/>
+
+    <include layout="@layout/activity_gp_for_you_episodes_all"/>
+</RelativeLayout>
