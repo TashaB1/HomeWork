@@ -33,7 +33,7 @@ public class VKProfilePageActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_items, menu);
+        getMenuInflater().inflate(R.menu.vk_menu_items, menu);
 
         return super.onCreateOptionsMenu(menu);
     }

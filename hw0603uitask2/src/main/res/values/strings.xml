@@ -21,11 +21,32 @@
     <string name="vk_menu_item_copy_link">Скопировать ссылку</string>
     <string name="vk_menu_item_open_in_brouser">Открыть в браузере</string>
 
-    <string name="vk_menu_bottom_navigation_phone_content"> </string>
-    <string name="vk_menu_bottom_navigation_search"> </string>
-    <string name="vk_menu_bottom_navigation_notifications"> </string>
-    <string name="vk_menu_bottom_navigation_obl"> </string>
-    <string name="vk_menu_bottom_navigation_menu"> </string>
+    <string name="vk_menu_bottom_navigation_phone_content"></string>
+    <string name="vk_menu_bottom_navigation_search"></string>
+    <string name="vk_menu_bottom_navigation_notifications"></string>
+    <string name="vk_menu_bottom_navigation_obl"></string>
+    <string name="vk_menu_bottom_navigation_menu"></string>
 
     <string name="vk_toolbar_title">Наталья Позитив</string>
+
+    <string name="gp_new">New</string>
+    <string name="gp_for_you">For you</string>
+
+    <string name="gp_tab_new_episodes">New episodes</string>
+    <string name="gp_tab_in_progress">In progress</string>
+    <string name="gp_tab_downloads">Downloads</string>
+
+    <string name="gp_episodes1_title">154: Developer Growth: Start Writing</string>
+    <string name="gp_episodes1_data">2 days ago • </string>
+    <string name="gp_episodes1_time">19 min</string>
+
+    <string name="gp_episodes2_title">Выпуск 89. Android in a car (Android A...</string>
+    <string name="gp_episodes2_data">2 days ago • </string>
+    <string name="gp_episodes2_time">67 min</string>
+
+    <string name="gp_episodes3_title">Podlodka #101 - Базы данных</string>
+    <string name="gp_episodes3_data">3 days ago • </string>
+    <string name="gp_episodes3_time">155 min</string>
+
+    <string name="gp_еpisodes_all">All new episodes</string>
 </resources>

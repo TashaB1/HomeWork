@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                             android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/ui_vk_new_root_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                tools:showIn="@layout/activity_vk_profile_page">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            app:title="">
+
+        <ImageView
+                android:id="@+id/pc_toolbar_icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:src="@drawable/ic_search_24dp"/>
+
+        <ImageView
+                android:id="@+id/pc_toolbar_icon_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:padding="12dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/logo_podcast"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/activity_gp_content"/>
+
+</RelativeLayout>
