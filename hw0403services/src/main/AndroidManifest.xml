@@ -9,14 +9,6 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <receiver
-                android:name=".service.MessageBroadcastReceiver"
-                android:enabled="true"
-                android:exported="true">
-            <intent-filter>
-                <action android:name="com.tashad16a.gmail.action.FILTER" />
-            </intent-filter>
-        </receiver>
 
         <service
                 android:name=".service.LessonProgressService"

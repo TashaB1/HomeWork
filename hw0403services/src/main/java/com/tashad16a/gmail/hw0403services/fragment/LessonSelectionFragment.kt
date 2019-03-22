@@ -11,7 +11,6 @@ import com.tashad16a.gmail.hw0403services.R
 class LessonSelectionFragment : Fragment(), View.OnClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         lateinit var selectionView: View
 
         selectionView = inflater.inflate(R.layout.fragment_lesson_selection, container, false)
@@ -33,21 +32,10 @@ class LessonSelectionFragment : Fragment(), View.OnClickListener {
         return selectionView
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-    }
-
-    override fun setRetainInstance(retain: Boolean) {
-        super.setRetainInstance(retain)
-    }
-
-    fun getButtonIndex(i: Int): Int {
+    fun getButtonIndex(id: Int): Int {
         var index = -1
-        when (i) {
+
+        when (id) {
             R.id.lesson1_button -> index = 1
             R.id.lesson2_button -> index = 2
             R.id.lesson3_button -> index = 3
@@ -62,11 +50,10 @@ class LessonSelectionFragment : Fragment(), View.OnClickListener {
         fun onButtonSelected(buttonIndex: Int)
     }
 
-    override fun onClick(v: View?) {
-        var buttonIndex = getButtonIndex(v?.id!!)
+    override fun onClick(view: View) {
+        val listener = activity as OnSelectedButtonListener
 
-        val listener = activity as OnSelectedButtonListener?
-        listener!!.onButtonSelected(buttonIndex)
+        listener.onButtonSelected(getButtonIndex(view.id))
     }
 
 

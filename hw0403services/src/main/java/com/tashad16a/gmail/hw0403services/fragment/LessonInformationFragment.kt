@@ -8,17 +8,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import com.tashad16a.gmail.hw0403services.R
 import android.widget.TextView
+import com.tashad16a.gmail.hw0403services.constant.ConstantName
 
 class LessonInformationFragment : Fragment() {
 
     lateinit var lessonInformation: TextView
     lateinit var lessonMentorIcon: ImageView
-    lateinit var informationView: View
     lateinit var lessonThemesArray: Array<String>
     var lastInfo: String? = ""
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        informationView = inflater.inflate(R.layout.fragment_lesson_information, container, false)
+
+        var informationView = inflater.inflate(R.layout.fragment_lesson_information, container, false)
 
         lessonInformation = informationView.findViewById(R.id.lesson_information_text_view)
         lessonMentorIcon = informationView.findViewById(R.id.lesson_information_image_view)
@@ -26,7 +27,7 @@ class LessonInformationFragment : Fragment() {
         lessonThemesArray = resources.getStringArray(R.array.theme_lesson)
 
         if (savedInstanceState != null) {
-            lastInfo = savedInstanceState.getString("INFORMATION")
+            lastInfo = savedInstanceState.getString(ConstantName.INFORMATION_KEY)
             lessonInformation.setText(lastInfo)
         }
 
@@ -37,23 +38,7 @@ class LessonInformationFragment : Fragment() {
         super.onSaveInstanceState(outState)
 
         lastInfo = lessonInformation.text.toString()
-        outState.putString("INFORMATION", lastInfo)
-    }
-
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        super.onViewStateRestored(savedInstanceState)
-    }
-
-    override fun setRetainInstance(retain: Boolean) {
-        super.setRetainInstance(retain)
-    }
-
-    fun setImage(lessonMentorIcon: ImageView) {
-        this.lessonMentorIcon = lessonMentorIcon
-    }
-
-    fun getImage(): ImageView {
-        return this.lessonMentorIcon
+        outState.putString(ConstantName.INFORMATION_KEY, lastInfo)
     }
 
     fun setInformation(buttonIndex: Int) {

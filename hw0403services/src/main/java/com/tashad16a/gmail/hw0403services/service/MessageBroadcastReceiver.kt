@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.Gravity
 import android.widget.Toast
+import com.tashad16a.gmail.hw0403services.constant.ConstantName
 
 class MessageBroadcastReceiver : BroadcastReceiver() {
 
@@ -12,7 +13,7 @@ class MessageBroadcastReceiver : BroadcastReceiver() {
         val toast: Toast?
         toast = Toast.makeText(
             context,
-            "сообщение: " + intent.getStringExtra("MESSAGE"),
+            intent.getStringExtra(ConstantName.MESSAGE_KEY),
             Toast.LENGTH_LONG
         )
 
