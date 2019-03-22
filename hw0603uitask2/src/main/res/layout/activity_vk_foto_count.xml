@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/ui_vk_foto_count_root_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                tools:showIn="@layout/activity_vk_profile_page">
+
+    <TextView
+            android:id="@+id/vk_foto_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/vk_foto"
+            android:textSize="12sp"
+            android:paddingLeft="3dp"
+            android:textColor="@color/real_black"
+            app:fontFamily="@font/lucida_sans"
+            android:scaleX="1.045"
+            android:gravity="center"/>
+
+    <TextView
+            android:id="@+id/vk_count_foto_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/vk_count_foto"
+            android:textSize="13sp"
+            android:textColor="@color/grey_600"
+            android:layout_toRightOf="@id/vk_foto_text_view"
+            android:paddingLeft="10dp"
+            app:fontFamily="@font/lucida_sans"
+            android:scaleX="1.045"
+            android:gravity="center"/>
+
+</RelativeLayout>

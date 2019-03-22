@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:app="http://schemas.android.com/apk/res-auto"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      tools:showIn="@layout/activity_vk_profile_page">
+
+    <LinearLayout
+            android:id="@+id/vk_block_foto_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="17dp">
+
+        <ImageView
+                android:id="@+id/vk_foto1_image_view"
+                android:layout_width="145dp"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="3dp"
+                app:srcCompat="@drawable/ic_block_foto1"/>
+
+        <ImageView
+                android:id="@+id/vk_foto2_image_view"
+                android:layout_width="145dp"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="3dp"
+                app:srcCompat="@drawable/ic_block_foto2"/>
+
+        <ImageView
+                android:id="@+id/vk_foto3_image_view"
+                android:layout_width="145dp"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="3dp"
+                app:srcCompat="@drawable/ic_block_foto3"/>
+
+        <ImageView
+                android:id="@+id/vk_foto4_image_view"
+                android:layout_width="145dp"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="3dp"
+                app:srcCompat="@drawable/ic_block_foto4"/>
+
+        <ImageView
+                android:id="@+id/vk_foto5_image_view"
+                android:layout_width="145dp"
+                android:layout_height="112dp"
+                android:layout_marginRight="3dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_block_foto5"/>
+
+        <ImageView
+                android:id="@+id/vk_foto6_image_view"
+                android:layout_width="145dp"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="3dp"
+                app:srcCompat="@drawable/ic_block_foto6"/>
+
+        <ImageView
+                android:id="@+id/vk_foto7_image_view"
+                android:layout_width="145dp"
+                android:layout_height="112dp"
+                android:scaleType="centerCrop"
+                android:layout_marginRight="3dp"
+                app:srcCompat="@drawable/ic_block_foto7"/>
+
+    </LinearLayout>
+
+</HorizontalScrollView>

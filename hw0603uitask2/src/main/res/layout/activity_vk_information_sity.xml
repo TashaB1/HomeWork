@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/ui_vk_information_sity_root_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:paddingBottom="8.7dp"
+                android:paddingTop="8.7dp"
+                tools:showIn="@layout/activity_vk_profile_page"
+                app:srcCompat="@drawable/ic_avatar_vk">
+
+    <ImageView
+            android:id="@+id/vk_information_sity_image_view"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_home_24dp"/>
+
+    <TextView
+            android:id="@+id/vk_information_sity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_toRightOf="@id/vk_information_sity_image_view"
+            android:text="@string/vk_information_sity"
+            android:textSize="13sp"
+            android:textColor="@color/grey_600"
+            app:fontFamily="@font/lucida_sans"
+            android:scaleX="1.045"/>
+
+</RelativeLayout>

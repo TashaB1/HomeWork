@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">HW0603_ui</string>
+    <string name="app_name">UI Android (HW0603)</string>
+    <string name="name">Наталья Позитив</string>
+
+    <string name="ui_vk_profile_page">VK Profile Page</string>
+    <string name="ui_google_podcasts">Google Podcasts</string>
+
+    <string name="vk_information_status">Изменить статус</string>
+    <string name="vk_information_friends">27 друзей</string>
+    <string name="vk_information_sity">Город: Гродно</string>
+    <string name="vk_information_university">ГрГУ им. Янки Купалы \'09</string>
+    <string name="vk_information_full">Показать информацию</string>
+    <string name="vk_information_profile">Профиль закрыт</string>
+
+    <string name="vk_new">Что у Вас нового?</string>
+
+    <string name="vk_foto">Фотографии</string>
+    <string name="vk_count_foto">222</string>
+    <string name="vk_button_text">Редактировать</string>
+
+    <string name="vk_menu_item_copy_link">Скопировать ссылку</string>
+    <string name="vk_menu_item_open_in_brouser">Открыть в браузере</string>
 </resources>
