@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.tashad16a.gmail.hw0603ui.uigooglepodcasts.fragment.CompoundSimplePageFragment
+            android:id="@+id/fragment_compoundView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/pg_fragment_textsize"
+            android:layout_gravity="center"/>
+
+</LinearLayout>

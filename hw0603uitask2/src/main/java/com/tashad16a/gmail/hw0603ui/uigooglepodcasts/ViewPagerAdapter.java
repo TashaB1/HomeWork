@@ -17,7 +17,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
-
     @Override
     public Fragment getItem(int position) {
         PageFragment pageFragment = new PageFragment();
@@ -26,7 +25,6 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         if (position == 0) {
             return pageFragment;
         } else {
-
             //TODO change text use CompoundView...  updateTextFragment(getPageTitle(position))
             return simplePageFragment;
         }
