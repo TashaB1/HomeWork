@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import com.tashad16a.gmail.hw0603_ui.R;
+import com.tashad16a.gmail.hw0603ui.uigooglepodcasts.fragment.PageFragment;
+import com.tashad16a.gmail.hw0603ui.uigooglepodcasts.fragment.SimplePageFragment;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     private Context mContext;
@@ -15,14 +17,18 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
+
     @Override
     public Fragment getItem(int position) {
+        PageFragment pageFragment = new PageFragment();
+        SimplePageFragment simplePageFragment = new SimplePageFragment();
+
         if (position == 0) {
-            return new PageFragment();
-        } else if (position == 1) {
-            return new PageFragment();
+            return pageFragment;
         } else {
-            return new PageFragment();
+
+            //TODO change text use CompoundView...  updateTextFragment(getPageTitle(position))
+            return simplePageFragment;
         }
     }
 

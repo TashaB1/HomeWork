@@ -20,12 +20,14 @@ public class SquareImageView extends AppCompatImageView {
 
     @Override
     protected void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
-        final int width = getDefaultSize(getSuggestedMinimumWidth(),widthMeasureSpec);
-        setMeasuredDimension(width/4-8, width/4-8);
+        final int WIDTH = getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec);
+        final int MEASURE_WIDTH = WIDTH / 4 - 8;
+
+        setMeasuredDimension(MEASURE_WIDTH, MEASURE_WIDTH);
     }
 
     @Override
-    protected void onSizeChanged(final int w, final int h, final int oldw, final int oldh) {
-        super.onSizeChanged(w, w, oldw, oldh);
+    protected void onSizeChanged(final int width, final int height, final int oldWidth, final int oldHeight) {
+        super.onSizeChanged(width, width, oldWidth, oldHeight);
     }
 }
