@@ -9,7 +9,7 @@
             android:id="@+id/pg_fragment_page_textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="TODO: How to change the text if to use CompoundView for Fragment in ViewPager (getItem)?"
+            android:text=""
             android:textSize="@dimen/pg_fragment_textsize"
             android:gravity="center"/>
 </merge>

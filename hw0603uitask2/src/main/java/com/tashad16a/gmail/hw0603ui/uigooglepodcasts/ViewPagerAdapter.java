@@ -10,8 +10,9 @@ import com.tashad16a.gmail.hw0603ui.uigooglepodcasts.fragment.SimplePageFragment
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     private Context mContext;
+    PageFragment pageFragment = new PageFragment();
 
-    public ViewPagerAdapter(Context context, FragmentManager fragmentManager) {
+    public ViewPagerAdapter(Context context, final FragmentManager fragmentManager) {
         super(fragmentManager);
 
         mContext = context;
@@ -19,14 +20,10 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        PageFragment pageFragment = new PageFragment();
-        SimplePageFragment simplePageFragment = new SimplePageFragment();
-
         if (position == 0) {
             return pageFragment;
         } else {
-            //TODO change text use CompoundView...  updateTextFragment(getPageTitle(position))
-            return simplePageFragment;
+            return SimplePageFragment.newInstance((String) getPageTitle(position));
         }
     }
 

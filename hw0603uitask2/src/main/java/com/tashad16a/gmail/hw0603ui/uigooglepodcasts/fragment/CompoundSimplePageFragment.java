@@ -34,10 +34,4 @@ public class CompoundSimplePageFragment extends LinearLayout {
 
         fragmentText = findViewById(R.id.pg_fragment_page_textView);
     }
-
-    public void updateTextFragment(String text) {
-        fragmentText.setText(text);
-    }
-
-
 }
