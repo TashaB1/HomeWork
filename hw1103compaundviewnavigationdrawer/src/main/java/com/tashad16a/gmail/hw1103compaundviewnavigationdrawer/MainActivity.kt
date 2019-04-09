@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
@@ -27,34 +28,31 @@ class MainActivity : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_menu)
         }
 
-        drawerLayout = findViewById(R.id.drawer_layout)
-
         val navigationView: NavigationView = findViewById(R.id.drawer_navigation_view)
-
         navigationView.setNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-
-                R.id.home_item,
-                R.id.services_item,
-                R.id.contacts_item,
-                R.id.settings_item -> {
-                    CompoundPageFragment.fragmentText.setText(menuItem.title)
-                    true
-                }
-                else -> false
-            }
-            drawerLayout.closeDrawers()
-            true
+            setTexFragment(menuItem)
         }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        drawerLayout = findViewById(R.id.drawer_layout)
         return when (item.itemId) {
             android.R.id.home -> {
                 drawerLayout.openDrawer(GravityCompat.START)
                 true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    fun setTexFragment(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            item.itemId -> {
+                CompoundPageFragment.fragmentText.setText(item.title)
+                drawerLayout.closeDrawers()
+                true
+            }
+            else -> false
         }
     }
 }
