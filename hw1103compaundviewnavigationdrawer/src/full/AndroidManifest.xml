@@ -10,7 +10,7 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowTranslucentStatus="true">
-        <activity android:name="com.tashad16a.gmail.hw1103compaundviewnavigationdrawer.MainActivity">
+        <activity android:name="com.tashad16a.gmail.full.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

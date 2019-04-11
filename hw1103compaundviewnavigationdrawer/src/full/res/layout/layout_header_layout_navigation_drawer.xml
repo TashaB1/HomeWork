@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.tashad16a.gmail.full.navigationdrawer.HeaderLayoutNavigationDrawer
+            android:id="@+id/header_nd_compoundView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nd_header_height"
+            android:background="@color/blue"
+            android:padding="@dimen/nd_header_padding"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+</LinearLayout>

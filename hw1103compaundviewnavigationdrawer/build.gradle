@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'Alg0ritm'
+            storePassword 'Alg0ritm'
+            storeFile file('E:/keystore/hw2503gradle.keystore')
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.tashad16a.gmail.hw1103compaundviewnavigationdrawer"
@@ -15,15 +23,47 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
+    }
+    flavorDimensions "version"
+    productFlavors {
+        demo {
+            applicationId 'com.tashad16a.gmail.demo'
+            applicationIdSuffix ".demo"
+            versionNameSuffix "-demo"
+            minSdkVersion 21
+            targetSdkVersion 28
+            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+            versionCode 1
+            versionName '1.0'
+        }
+        full {
+            applicationId 'com.tashad16a.gmail.full'
+            applicationIdSuffix ".full"
+            versionNameSuffix "-full"
+            minSdkVersion 21
+            targetSdkVersion 28
+            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+            versionCode 1
+            versionName '1.0'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.resValue "string", "app_name", '" Navigation Drawer | ' + variant.productFlavors.get(0).name + ' | ' + variant.buildType.name + '"'
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
