@@ -39,26 +39,27 @@ android {
             applicationId 'com.tashad16a.gmail.demo'
             applicationIdSuffix ".demo"
             versionNameSuffix "-demo"
-            minSdkVersion 21
-            targetSdkVersion 28
-            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
-            versionCode 1
-            versionName '1.0'
         }
         full {
             applicationId 'com.tashad16a.gmail.full'
             applicationIdSuffix ".full"
             versionNameSuffix "-full"
-            minSdkVersion 21
-            targetSdkVersion 28
-            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
-            versionCode 1
-            versionName '1.0'
         }
     }
 
     applicationVariants.all { variant ->
         variant.resValue "string", "app_name", '" Navigation Drawer | ' + variant.productFlavors.get(0).name + ' | ' + variant.buildType.name + '"'
+
+        def manifest = (variant.productFlavors.get(0).name.equals('demo')) ? new XmlSlurper().parse(file(android.sourceSets.demo.manifest.srcFile)) : new XmlSlurper().parse(file(android.sourceSets.full.manifest.srcFile))
+
+        String usesPermission = ''
+
+        manifest."uses-permission".each { p ->
+            usesPermission = usesPermission + '\n' + p."@android:name"
+        }
+
+        variant.resValue "string", "permission", usesPermission
+        variant.resValue "dimen", "nd_fragment_text_size", "16dp"
     }
 }
 

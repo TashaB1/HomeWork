@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="nd_header_height">152dp</dimen>
-    <dimen name="nd_header_padding">16dp</dimen>
-    <dimen name="nd_fragment_text_size">32dp</dimen>
-</resources>

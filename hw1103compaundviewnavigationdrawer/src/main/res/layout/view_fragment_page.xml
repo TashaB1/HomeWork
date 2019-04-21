@@ -9,7 +9,7 @@
             android:id="@+id/nd_fragment_page_textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text=""
+            android:text="@string/permission"
             android:textSize="@dimen/nd_fragment_text_size"
             android:gravity="center"/>
 
