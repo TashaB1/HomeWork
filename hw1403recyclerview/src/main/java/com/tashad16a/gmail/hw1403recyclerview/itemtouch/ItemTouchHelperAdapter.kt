@@ -4,8 +4,4 @@ interface ItemTouchHelperAdapter {
     fun onItemMove(fromPosition: Int, toPosition: Int)
 
     fun onItemRemove(position: Int)
-
-    fun onItemSelected()
-
-    fun onItemClear()
 }

@@ -16,16 +16,13 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
     ItemTouchHelperAdapter {
 
     var students: MutableList<Student> = ArrayList()
-    lateinit var studentView: View
 
     constructor(students: MutableList<Student>) : super() {
         this.students = students
     }
 
     override fun onCreateViewHolder(@NonNull viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        studentView = LayoutInflater.from(viewGroup.context).inflate(R.layout.layout_student, viewGroup, false)
-
-        return ViewHolder(studentView)
+        return ViewHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.layout_student, viewGroup, false))
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
@@ -69,13 +66,5 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>
     override fun onItemRemove(position: Int) {
         students.removeAt(position)
         notifyItemRemoved(position)
-    }
-
-    override fun onItemSelected() {
-        studentView.setBackgroundColor(Color.LTGRAY)
-    }
-
-    override fun onItemClear() {
-        studentView.setBackgroundColor(0)
     }
 }

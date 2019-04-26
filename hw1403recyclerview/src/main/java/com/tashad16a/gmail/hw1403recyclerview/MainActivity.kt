@@ -1,15 +1,19 @@
 package com.tashad16a.gmail.hw1403recyclerview
 
+import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.Nullable
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
 import com.tashad16a.gmail.hw1403recyclerview.itemtouch.ItemTouchHelperCallback
+import com.tashad16a.gmail.hw1403recyclerview.recyclerview.DividerItemDecoration
 import com.tashad16a.gmail.hw1403recyclerview.recyclerview.RecyclerViewAdapter
 import com.tashad16a.gmail.hw1403recyclerview.recyclerview.Student
 
 class MainActivity : AppCompatActivity() {
+
+    private val PADDING_DIVIDER = 50
 
     var students: MutableList<Student> = ArrayList()
 
@@ -25,6 +29,13 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.students_recyclerView)
         recyclerViewAdapter = RecyclerViewAdapter(students)
+
+        recyclerView.addItemDecoration(
+            DividerItemDecoration(
+                this,
+                PADDING_DIVIDER
+            )
+        )
         recyclerView.adapter = recyclerViewAdapter
 
         val callback = ItemTouchHelperCallback(recyclerViewAdapter)
